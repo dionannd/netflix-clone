@@ -1,10 +1,15 @@
-import React from "react";
-import { BellIcon, SearchIcon } from "@heroicons/react/solid"
-import Link from "next/link";
+import React from 'react'
+import { BellIcon, SearchIcon } from '@heroicons/react/solid'
+import Link from 'next/link'
+import Image from 'next/image'
+
+import account from '../public/assets/account.png'
+import logo from '../public/assets/logo.svg'
+import BasicMenu from './BasicMenu'
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = React.useState(false);
-  
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -13,24 +18,26 @@ const Header = () => {
         setIsScrolled(false)
       }
     }
-    
+
     window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-  
+
   return (
-    <header className={`${isScrolled && "bg-[#141414]"}`}>
+    <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <img
-          src="https://rb.gy/ulxxee"
-          alt="Logo Type"
+        <Image
+          src={logo}
+          alt="logo Type"
           width={100}
           height={100}
-          className="cursor-pointer object-contain"
+          className="object-contain cursor-pointer"
         />
+
+        <BasicMenu />
 
         <ul className="hidden space-x-4 md:flex">
           <li className="header-link">Home</li>
@@ -42,18 +49,18 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4 text-sm font-light">
-        <SearchIcon className="hidden sm:inline h-6 w-6" />
+        <SearchIcon className="hidden w-6 h-6 sm:inline" />
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="w-6 h-6" />
-        <Link href="/account">
-          <img
-            src="https://rb.gy/g1pwyx" 
-            alt="Account" 
-            className="cursor-pointer rounded"
+        <Link href="/account" passHref>
+          <Image
+            src={account}
+            alt="account"
+            className="rounded cursor-pointer"
           />
         </Link>
       </div>
-    </header> 
+    </header>
   )
 }
 

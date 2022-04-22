@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRecoilValue } from 'recoil'
+import { movieState } from '../atoms/modalAtom'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Row from '../components/Row'
@@ -28,6 +30,7 @@ const Home: NextPage<Props> = ({
   documentaries
 }: Props) => {
   // const movie = useRecoilValue(movieState)
+
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
