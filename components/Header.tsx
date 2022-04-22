@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import account from '../public/assets/account.png'
-import logo from '../public/assets/logo.svg'
 import BasicMenu from './BasicMenu'
 
 const Header = () => {
@@ -29,11 +28,11 @@ const Header = () => {
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <Image
-          src={logo}
-          alt="logo Type"
+        <img
+          src="/assets/logo.svg"
           width={100}
           height={100}
+          alt="logo Type"
           className="object-contain cursor-pointer"
         />
 
