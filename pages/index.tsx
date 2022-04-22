@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { movieState } from '../atoms/modalAtom'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Row from '../components/Row'
@@ -27,10 +28,14 @@ const Home: NextPage<Props> = ({
   romanceMovies,
   documentaries
 }: Props) => {
+  // const movie = useRecoilValue(movieState)
   return (
-    <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511] lg:h-[140vh]">
+    <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
-        <title>Home- Netflix</title>
+        <title>
+          {/* {movie?.title || movie?.original_name || 'Home'} - Netflix */}
+          Home - Netflix
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -38,7 +43,8 @@ const Home: NextPage<Props> = ({
 
       <main className="relative pb-24 pl-4 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals} />
-        <section>
+
+        <section className="md:space-y-24">
           <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />

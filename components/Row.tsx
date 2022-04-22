@@ -21,6 +21,7 @@ const Row: React.FC<Props> = ({ title, movies }: Props) => {
         direction === 'left'
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth
+
       rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
     }
   }
