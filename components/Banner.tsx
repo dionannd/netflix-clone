@@ -13,8 +13,8 @@ interface Props {
 
 const Banner: React.FC<Props> = ({ netflixOriginals }: Props) => {
   const [movie, setMovie] = React.useState<Movie | null>(null)
-  // const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
-  // const [showModal, setShowModal] = useRecoilState(modalState)
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
+  const [showModal, setShowModal] = useRecoilState(modalState)
 
   React.useEffect(() => {
     setMovie(
@@ -47,10 +47,10 @@ const Banner: React.FC<Props> = ({ netflixOriginals }: Props) => {
 
         <button
           className="banner-button bg-[gray]/70"
-          // onClick={() => {
-          //   setCurrentMovie(movie)
-          //   setShowModal(true)
-          // }}
+          onClick={() => {
+            setCurrentMovie(movie)
+            setShowModal(true)
+          }}
         >
           <InformationCircleIcon className="w-5 h-5 md:h-8 md:w-8" /> More Info
         </button>

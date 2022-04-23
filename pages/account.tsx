@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Membership from '../components/Membership'
 import useAuth from '../hooks/useAuth'
 
 import member from '../public/assets/member.svg'
@@ -48,6 +49,8 @@ const Account: NextPage = () => {
             </p>
           </div>
         </div>
+
+        <Membership />
 
         <div className="grid grid-cols-1 px-4 py-4 mt-6 border gap-x-4 md:grid-cols-4 md:border-x-0 md:border-t md:border-b-0 md:px-0 md:pb-0">
           <h4 className="text-lg text-[gray]">Plan Details</h4>

@@ -36,7 +36,7 @@ function Modal() {
   const { user } = useAuth()
 
   const toastStyle = {
-    background: 'black',
+    background: 'white',
     color: 'black',
     fontWeight: 'bold',
     fontSize: '16px',
@@ -128,6 +128,8 @@ function Modal() {
     }
   }
 
+  console.log(addedToList)
+
   return (
     <MuiModal
       open={showModal}
@@ -162,7 +164,7 @@ function Modal() {
                 <FaPlay className="text-black h-7 w-7" />
                 Play
               </button>
-              <button>
+              <button className="modal-button" onClick={handleList}>
                 {addedToList ? (
                   <CheckIcon className="h-7 w-7" />
                 ) : (
@@ -203,12 +205,14 @@ function Modal() {
                   {genres.map(genre => genre.name).join(', ')}
                 </div>
 
-                <div className="text-[gray]">
-                  <span>Original language:</span> {movie?.original_language}
+                <div>
+                  <span className="text-[gray]">Original language:</span>{' '}
+                  {movie?.original_language}
                 </div>
 
-                <div className="text-[gray]">
-                  <span>Total votes:</span> {movie?.vote_count}
+                <div>
+                  <span className="text-[gray]">Total votes:</span>{' '}
+                  {movie?.vote_count}
                 </div>
               </div>
             </div>
