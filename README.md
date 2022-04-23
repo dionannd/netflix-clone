@@ -1,31 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Netflix Clone
 
-## Getting Started
+[https://www.dion-netflix.vercel.app/](https://www.dion-netflix.vercel.app/)
 
-First, run the development server:
+## Stack
+- [NextJS](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [Tailwindcss](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+- [Recoil](https://recoiljs.org/) - A state management library for React.
+- [MUI](https://mui.com/) - The React component library you always wanted.
+- [Firebase](https://firebase.google.com/) - Easily integrate Firebase into your team's favorite tools. Trusted by the largest apps.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Plugins & Others
+- [heroicons](https://heroicons.com/) - Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
+- [react-icons](https://react-icons.github.io/react-icons/) - Include popular icons in your React projects easily with react-icons.
+- [react-hook-form](https://react-hook-form.com/) - Simple React forms validation.
+- [react-player](https://github.com/CookPete/react-player) - A React component for playing a variety of URLs.
+- [react-hot-toast](https://react-hot-toast.com/) - Add beautiful notifications to your React app with react-hot-toast.
+- [tailwind-scrollbar-hide](https://github.com/reslear/tailwind-scrollbar-hide) - Tailwind plugin for hide scrollbars, although the element can still be scrolled if the element's content overflows.
+- [tailwind-scrollbar](https://github.com/adoxography/tailwind-scrollbar) - Scrollbar plugin for Tailwind CSS.
+- [tailwindcss-textshadow](https://github.com/iunteq/tailwindcss-textshadow) - A Utility Plugins for controlling Text Shadow of an element for Tailwind.
 
 ## Deploy on Vercel
 
