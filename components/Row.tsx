@@ -1,16 +1,17 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
+import { DocumentData } from 'firebase/firestore'
 import React from 'react'
 import { Movie } from '../typing'
 import Thumbnail from './Thumbnail'
 
 interface Props {
   title: string
-  movies: Movie[]
+  movies: Movie[] | DocumentData[]
 }
 
 const Row: React.FC<Props> = ({ title, movies }: Props) => {
   const rowRef = React.useRef<HTMLDivElement>(null)
-  const [isMoved, setIsMoved] = React.useState(false)
+  const [isMoved, setIsMoved] = React.useState<boolean>(false)
 
   const handleClick = (direction: string) => {
     setIsMoved(true)
@@ -39,7 +40,7 @@ const Row: React.FC<Props> = ({ title, movies }: Props) => {
           onClick={() => handleClick('left')}
         />
         <div
-          className="flex items-center space-x-0.5 overflow-x-scroll scrollbar-hide md:space-x-2.5 md:p-2"
+          className="flex items-center space-x-0.5 overflow-x-scroll scrollbar-hide  md:space-x-2.5 md:p-2"
           ref={rowRef}
         >
           {movies.map(movie => (

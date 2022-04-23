@@ -2,8 +2,6 @@ import React from 'react'
 import { BellIcon, SearchIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import Image from 'next/image'
-
-import account from '../public/assets/account.png'
 import BasicMenu from './BasicMenu'
 
 const Header = () => {
@@ -52,8 +50,8 @@ const Header = () => {
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="w-6 h-6" />
         <Link href="/account" passHref>
-          <Image
-            src={account}
+          <img
+            src="/assets/account.png"
             alt="account"
             className="rounded cursor-pointer"
           />
